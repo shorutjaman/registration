@@ -46,8 +46,9 @@
 
     <!-- Header section for the event title and language toggle buttons -->
     <header class="bg-blue-600 text-white py-4 text-center fade">
-        <h1 class="text-3xl font-bold">Reunion festival marking the 36th anniversary of Porabari High School, Sirajganj
-        </h1>
+        <h1 id="mainHeading" class="text-3xl font-bold">Reunion festival marking the 36th anniversary of Porabari High
+            School, Sirajganj</h1>
+        <p id="organizerInfo" class="text-sm mt-1">Organized by SSC students from 2010 to 2025</p>
         <div class="mt-2">
             <!-- Language selection buttons -->
             <button onclick="setLanguage('en')" class="bg-white text-blue-600 px-3 py-1 rounded mr-2">English</button>
@@ -64,14 +65,15 @@
 
             <!-- Full Name Input Field -->
             <div class="mb-4">
-                <label for="name" class="block mb-1 font-medium">Full Name</label>
+                <label for="name" class="block mb-1 font-medium">Full Name <span class="text-red-500">*</span></label>
                 <input type="text" id="name" name="name" placeholder="Enter Your Full Name"
                     class="w-full border border-gray-300 p-2 rounded" required>
             </div>
 
             <!-- Phone Number Input Field with validation -->
             <div class="mb-4">
-                <label for="phone" class="block mb-1 font-medium">Phone Number</label>
+                <label for="phone" class="block mb-1 font-medium">Phone Number <span
+                        class="text-red-500">*</span></label>
                 <input type="tel" id="phone" name="phone" placeholder="01XXXXXXXXX" maxlength="11" inputmode="numeric"
                     pattern="01[0-9]{9}" class="w-full border border-gray-300 p-2 rounded"
                     title="Enter a valid 11-digit Bangladeshi phone number"
@@ -87,24 +89,27 @@
 
             <!-- SSC Batch Input Field -->
             <div class="mb-4">
-                <label for="ssc_batch" class="block mb-1 font-medium">SSC Batch</label>
+                <label for="ssc_batch" class="block mb-1 font-medium">SSC Batch <span
+                        class="text-red-500">*</span></label>
                 <select id="ssc_batch" name="ssc_batch" class="w-full border border-gray-300 p-2 rounded" required>
                     <option value="">Select Batch</option>
-                    <!-- Batch options from 1989 to 2025 -->
+                    <!-- Batch options from 2010 to 2025 -->
                     <!-- These will be generated dynamically with JavaScript below -->
                 </select>
             </div>
 
             <!-- Number of Participants Input Field with real-time total update -->
             <div class="mb-4">
-                <label for="participants" class="block mb-1 font-medium">Number of Participants</label>
+                <label for="participants" class="block mb-1 font-medium">Number of Participants <span
+                        class="text-red-500">*</span></label>
                 <input type="number" placeholder="1" id="participants" name="participants" min="1" max="100"
                     class="w-full border border-gray-300 p-2 rounded" required oninput="updateAmount()">
             </div>
 
             <!-- T-Shirt Size Dropdown Selection -->
             <div class="mb-4">
-                <label for="tshirt_size" class="block mb-1 font-medium">T-Shirt Size</label>
+                <label for="tshirt_size" class="block mb-1 font-medium">T-Shirt Size <span
+                        class="text-red-500">*</span></label>
                 <select id="tshirt_size" name="tshirt_size" class="w-full border border-gray-300 p-2 rounded" required>
                     <option value="">Select Size</option>
                     <option value="S">S</option>
@@ -117,7 +122,7 @@
 
             <!-- Payment Method Radio Buttons -->
             <div class="mb-4">
-                <label class="block mb-1 font-medium">Payment Method</label>
+                <label class="block mb-1 font-medium">Payment Method <span class="text-red-500">*</span></label>
                 <div class="flex space-x-4">
                     <label class="flex items-center"><input type="radio" name="payment_method" value="bkash"
                             class="mr-2" required><span>bKash</span></label>
@@ -144,7 +149,8 @@
 
             <!-- Transaction ID Input Field -->
             <div class="mb-4">
-                <label for="transaction_id" class="block mb-1 font-medium">Payment Transaction ID</label>
+                <label for="transaction_id" class="block mb-1 font-medium">Payment Transaction ID <span
+                        class="text-red-500">*</span></label>
                 <input type="text" id="transaction_id" name="transaction_id" placeholder="Transaction ID" maxlength="10"
                     pattern=".{10,10}" class="w-full border border-gray-300 p-2 rounded" required>
             </div>
@@ -170,7 +176,7 @@
         <!-- Contact Information Section -->
         <div class="mt-8 text-center text-sm text-gray-600 fade">
             <p><strong>Address:</strong> Porabari High School School Ground</p>
-            <p><strong>Contact:</strong> 01771687568 / 01746893445</p>
+            <p><strong>Contact:</strong> 01772-659023</p>
         </div>
 
         <!-- Developer Credit -->
@@ -186,8 +192,22 @@
 
         // Language translations
         const translations = {
-            en: ["Full Name", "Phone Number", "Email Address", "SSC Batch", "Number of Participants", "T-Shirt Size", "Payment Method", "Payment Transaction ID", "Total:", "Address: Porabari High School School Ground", "Contact: 01771687568 / 01746893445", "Developed by MD. SOJIB HOSSEN", "Registration Form", "Reunion festival marking the 36th anniversary of Porabari High School, Sirajganj"],
-            bn: ["পূর্ণ নাম", "ফোন নম্বর", "ইমেইল ঠিকানা", "এসএসসি ব্যাচ", "অংশগ্রহণকারীর সংখ্যা", "টি-শার্টের সাইজ", "পেমেন্ট পদ্ধতি", "পেমেন্ট ট্রানজ্যাকশন আইডি", "মোট:", "ঠিকানা: পোড়াবাড়ী উচ্চ বিদ্যালয় মাঠ", "যোগাযোগ: ০১৭৭১৬৮৭৫৬৮ / ০১৭৪৬৮৯৩৪৪৫", "ডেভেলপার মো. সজিব হোসেন", "নিবন্ধন ফর্ম", "পোড়াবাড়ি উচ্চ বিদ্যালয়, সিরাজগঞ্জ ৩৬ বছর পূর্তি উপলক্ষে পুনর্মিলনী উৎসব"]
+            en: [
+                "Full Name", "Phone Number", "Email Address", "SSC Batch", "Number of Participants",
+                "T-Shirt Size", "Payment Method", "Payment Transaction ID", "Total:",
+                "Address: Porabari High School School Ground", "Contact: 01772-659023",
+                "Developed by MD. SOJIB HOSSEN", "Registration Form",
+                "Reunion festival marking the 36th anniversary of Porabari High School, Sirajganj",
+                "Organized by SSC students from 2010 to 2025"
+            ],
+            bn: [
+                "পূর্ণ নাম", "ফোন নম্বর", "ইমেইল ঠিকানা", "এসএসসি ব্যাচ", "অংশগ্রহণকারীর সংখ্যা",
+                "টি-শার্টের সাইজ", "পেমেন্ট পদ্ধতি", "পেমেন্ট ট্রানজ্যাকশন আইডি", "মোট:",
+                "ঠিকানা: পোড়াবাড়ী উচ্চ বিদ্যালয় মাঠ", "যোগাযোগ: ০১৭৭২-৬৫৯০২৩",
+                "ডেভেলপার মো. সজিব হোসেন", "নিবন্ধন ফর্ম",
+                "পোড়াবাড়ি উচ্চ বিদ্যালয়, সিরাজগঞ্জ ৩৬ বছর পূর্তি উপলক্ষে পুনর্মিলনী উৎসব",
+                "আয়োজনে ২০১০ থেকে ২০২৫ সালের এসএসসি শিক্ষার্থীগন"
+            ]
         };
 
         // Payment instructions
@@ -216,15 +236,24 @@
 
         // Update total amount
         function updateAmount() {
-            const participants = document.getElementById('participants').value;
-            const totalAmount = participants * 200;
+            const participants = parseInt(document.getElementById('participants').value) || 1;
+
+            const guestCount = participants - 1; // একজন অংশগ্রহণকারী বাদ দিয়ে বাকি সবাই গেস্ট
+            const participantAmount = 500;
+            const guestAmount = 300;
+
+            let totalAmount = participantAmount;
+            if (guestCount > 0) {
+                totalAmount += guestCount * guestAmount;
+            }
+
             document.getElementById('total_amount').value = totalAmount;
             document.getElementById('amount_display').innerText = `${translations[currentLanguage][8]} ${totalAmount} ${currentLanguage === 'bn' ? 'টাকা' : 'Taka'}`;
         }
 
         // Populate SSC batch years
         const batchSelect = document.getElementById('ssc_batch');
-        for (let year = 1989; year <= 2025; year++) {
+        for (let year = 2010; year <= 2025; year++) {
             const option = document.createElement('option');
             option.value = year;
             option.text = year;
@@ -240,14 +269,24 @@
             setTimeout(() => {
                 const labels = document.querySelectorAll('label.block.font-medium');
                 const text = translations[lang];
-                labels.forEach((label, index) => label.innerText = text[index]);
+
+                // Update required labels (with potential red star)
+                labels.forEach((label, index) => {
+                    const hasStar = label.querySelector('span.text-red-500');
+                    if (hasStar) {
+                        label.innerHTML = `${text[index]} <span class="text-red-500">*</span>`;
+                    } else {
+                        label.innerText = text[index];
+                    }
+                });
 
                 document.getElementById('amount_display').innerText = `${text[8]} ${document.getElementById('total_amount').value} ${lang === 'bn' ? 'টাকা' : 'Taka'}`;
                 document.querySelector('.mt-8 p:nth-child(1)').innerHTML = `<strong>${text[9]}</strong>`;
                 document.querySelector('.mt-8 p:nth-child(2)').innerHTML = `<strong>${text[10]}</strong>`;
                 document.querySelector('.mt-4 p').innerText = text[11];
                 document.querySelector('h1.text-2xl').innerText = text[12];
-                document.querySelector('header h1').innerText = text[13];
+                document.getElementById('mainHeading').innerText = text[13];
+                document.getElementById('organizerInfo').innerText = text[14];
 
                 const selectedPayment = document.querySelector('input[name="payment_method"]:checked');
                 if (selectedPayment) {
