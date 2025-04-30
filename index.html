@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <meta property="og:locale" content="bn_BD" />
   <meta property="og:locale:alternate" content="en_US" /> -->
-    <title>Porabari High School, Sirajganj 36th Anniversary and Reunion Festival 1989-2025</title>
+    <title>Porabari High School, Sirajganj 36th Anniversary and Reunion Festival</title>
 
     <!-- Tailwind CSS CDN for styling -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
@@ -48,7 +48,7 @@
     <header class="bg-blue-600 text-white py-4 text-center fade">
         <h1 id="mainHeading" class="text-3xl font-bold">Reunion festival marking the 36th anniversary of Porabari High
             School, Sirajganj</h1>
-        <p id="organizerInfo" class="text-sm mt-1">Organized by SSC students from 2010 to 2025</p>
+        <p id="organizerInfo" class="text-sm mt-1">Organized by SSC students from 1989 to 2025</p>
         <div class="mt-2">
             <!-- Language selection buttons -->
             <button onclick="setLanguage('en')" class="bg-white text-blue-600 px-3 py-1 rounded mr-2">English</button>
@@ -74,8 +74,8 @@
             <div class="mb-4">
                 <label for="phone" class="block mb-1 font-medium">Phone Number <span
                         class="text-red-500">*</span></label>
-                <input type="tel" id="phone" name="phone" placeholder="01XXXXXXXXX" maxlength="11" inputmode="numeric"
-                    pattern="01[0-9]{9}" class="w-full border border-gray-300 p-2 rounded"
+                <input type="tel" id="phone" name="phone" placeholder="Enter Your Phone Number" maxlength="11"
+                    inputmode="numeric" pattern="01[0-9]{9}" class="w-full border border-gray-300 p-2 rounded"
                     title="Enter a valid 11-digit Bangladeshi phone number"
                     class="w-full border border-gray-300 p-2 rounded" required>
             </div>
@@ -102,7 +102,7 @@
             <div class="mb-4">
                 <label for="participants" class="block mb-1 font-medium">Number of Participants <span
                         class="text-red-500">*</span></label>
-                <input type="number" placeholder="1" id="participants" name="participants" min="1" max="100"
+                <input type="number" placeholder="0" id="participants" name="participants" min="1" max="100"
                     class="w-full border border-gray-300 p-2 rounded" required oninput="updateAmount()">
             </div>
 
@@ -198,7 +198,7 @@
                 "Address: Porabari High School School Ground", "Contact: 01772-659023",
                 "Developed by MD. SOJIB HOSSEN", "Registration Form",
                 "Reunion festival marking the 36th anniversary of Porabari High School, Sirajganj",
-                "Organized by SSC students from 2010 to 2025"
+                "Organized by SSC students from 1989 to 2025"
             ],
             bn: [
                 "পূর্ণ নাম", "ফোন নম্বর", "ইমেইল ঠিকানা", "এসএসসি ব্যাচ", "অংশগ্রহণকারীর সংখ্যা",
@@ -206,29 +206,29 @@
                 "ঠিকানা: পোড়াবাড়ী উচ্চ বিদ্যালয় মাঠ", "যোগাযোগ: ০১৭৭২-৬৫৯০২৩",
                 "ডেভেলপার মো. সজিব হোসেন", "নিবন্ধন ফর্ম",
                 "পোড়াবাড়ি উচ্চ বিদ্যালয়, সিরাজগঞ্জ ৩৬ বছর পূর্তি উপলক্ষে পুনর্মিলনী উৎসব",
-                "আয়োজনে ২০১০ থেকে ২০২৫ সালের এসএসসি শিক্ষার্থীগন"
+                "আয়োজনে ১৯৮৯ থেকে ২০২৫ সালের এসএসসি শিক্ষার্থীগন"
             ]
         };
 
         // Payment instructions
         const paymentInstructions = {
             en: {
-                bkash: "bKash Payment Number: 01XXXXXXXXX (Personal). Please send the exact amount and enter your transaction ID below.",
-                nagad: "Nagad Payment Number: 01YYYYYYYYY (Personal). Please send the exact amount and enter your transaction ID below.",
-                rocket: "Rocket Payment Number: 01ZZZZZZZZZ (Personal). Please send the exact amount and enter your transaction ID below."
+                bkash: "bKash Payment Number: 01772659023 (Personal). Please send the exact amount to the exact number and enter your transaction ID below.",
+                nagad: "Nagad Payment Number: 01772659023 (Personal). Please send the exact amount to the exact number and enter your transaction ID below.",
+                rocket: "Rocket Payment Number: 01772659023 (Personal). Please send the exact amount to the exact number and enter your transaction ID below."
             },
             bn: {
-                bkash: "বিকাশ নম্বর: ০১XXXXXXXXX (পার্সোনাল)। নির্ধারিত টাকা পাঠিয়ে নিচে ট্রানজ্যাকশন আইডি দিন।",
-                nagad: "নগদ নম্বর: ০১YYYYYYYYY (পার্সোনাল)। নির্ধারিত টাকা পাঠিয়ে নিচে ট্রানজ্যাকশন আইডি দিন।",
-                rocket: "রকেট নম্বর: ০১ZZZZZZZZZ (পার্সোনাল)। নির্ধারিত টাকা পাঠিয়ে নিচে ট্রানজ্যাকশন আইডি দিন।"
+                bkash: "বিকাশ নম্বর: ০১৭৭২৬৫৯০২৩ (পার্সোনাল)। অনুগ্রহ করে সঠিক নম্বরে নির্ধারিত টাকা পাঠিয়ে নিচে ট্রানজ্যাকশন আইডি দিন।",
+                nagad: "নগদ নম্বর: ১৭৭২৬৫৯০২৩ (পার্সোনাল)। অনুগ্রহ করে সঠিক নম্বরে নির্ধারিত টাকা পাঠিয়ে নিচে ট্রানজ্যাকশন আইডি দিন।",
+                rocket: "রকেট নম্বর: ১৭৭২৬৫৯০২৩ (পার্সোনাল)। অনুগ্রহ করে সঠিক নম্বরে নির্ধারিত টাকা পাঠিয়ে নিচে ট্রানজ্যাকশন আইডি দিন।"
             }
         };
 
         // Payment numbers
         const paymentNumbers = {
-            bkash: "01XXXXXXXXX",
-            nagad: "01YYYYYYYYY",
-            rocket: "01ZZZZZZZZZ"
+            bkash: "01772659023",
+            nagad: "01772659023",
+            rocket: "01772659023"
         };
 
         // Current language
@@ -236,24 +236,43 @@
 
         // Update total amount
         function updateAmount() {
-            const participants = parseInt(document.getElementById('participants').value) || 1;
+            const participantsInput = document.getElementById('participants');
+            const participants = parseInt(participantsInput.value);
 
-            const guestCount = participants - 1; // একজন অংশগ্রহণকারী বাদ দিয়ে বাকি সবাই গেস্ট
-            const participantAmount = 500;
-            const guestAmount = 300;
+            const batchYear = parseInt(document.getElementById('ssc_batch').value);
 
-            let totalAmount = participantAmount;
-            if (guestCount > 0) {
-                totalAmount += guestCount * guestAmount;
+            if (!batchYear || !participants || participants < 1) {
+                document.getElementById('total_amount').value = 0;
+                document.getElementById('amount_display').innerText =
+                    `${translations[currentLanguage][8]} 0 ${currentLanguage === 'bn' ? 'টাকা' : 'Taka'}`;
+                return;
             }
 
+            let participantAmount = 0;
+
+            if (batchYear >= 1989 && batchYear <= 2010) {
+                participantAmount = 1200;
+            } else if (batchYear >= 2011 && batchYear <= 2016) {
+                participantAmount = 800;
+            } else if (batchYear >= 2017 && batchYear <= 2024) {
+                participantAmount = 600;
+            } else {
+                participantAmount = 600; // fallback
+            }
+
+            const guestCount = Math.max(0, participants - 1);
+            const guestAmount = 400;
+
+            let totalAmount = participantAmount + guestCount * guestAmount;
+
             document.getElementById('total_amount').value = totalAmount;
-            document.getElementById('amount_display').innerText = `${translations[currentLanguage][8]} ${totalAmount} ${currentLanguage === 'bn' ? 'টাকা' : 'Taka'}`;
+            document.getElementById('amount_display').innerText =
+                `${translations[currentLanguage][8]} ${totalAmount} ${currentLanguage === 'bn' ? 'টাকা' : 'Taka'}`;
         }
 
         // Populate SSC batch years
         const batchSelect = document.getElementById('ssc_batch');
-        for (let year = 2010; year <= 2025; year++) {
+        for (let year = 1989; year <= 2025; year++) {
             const option = document.createElement('option');
             option.value = year;
             option.text = year;
@@ -369,6 +388,7 @@
             document.getElementById('submitBtn').setAttribute('aria-disabled', 'true');
             document.getElementById('submitBtn').querySelector('span').innerText = "Submitting...";
 
+            // 🛑 এখানে Registration ID তৈরি হচ্ছে
             const batchYear = document.getElementById('ssc_batch').value;
             const uniqueSuffix = Date.now().toString().slice(-4);
             const registrationId = `PHS${batchYear}${uniqueSuffix}`;
